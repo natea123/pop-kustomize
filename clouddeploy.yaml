@@ -8,7 +8,7 @@ serialPipeline:
  stages:
  - targetId: test
    profiles:
-   - dev
+   - test
  - targetId: staging
    profiles:
    - staging

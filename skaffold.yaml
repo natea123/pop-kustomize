@@ -21,7 +21,7 @@ portForward:
   port: 8080 
   localPort: 8080
 profiles:
-  - name: dev
+  - name: test
     deploy:
       kustomize:
         paths: 
