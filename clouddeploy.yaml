@@ -6,13 +6,13 @@ metadata:
 description: pop-stats application delivery pipeline
 serialPipeline:
  stages:
- - targetId: test
+ - targetId: test1
    profiles:
    - test
- - targetId: staging
+ - targetId: staging1
    profiles:
    - staging
- - targetId: prod
+ - targetId: prod1
    profiles:
    - prod
 ---
@@ -20,7 +20,7 @@ serialPipeline:
 apiVersion: deploy.cloud.google.com/v1
 kind: Target
 metadata:
-  name: test
+  name: test1
 description: test cluster
 gke:
   cluster: projects/project-id-here/locations/us-central1/clusters/testcluster
@@ -29,7 +29,7 @@ gke:
 apiVersion: deploy.cloud.google.com/v1
 kind: Target
 metadata:
-  name: staging
+  name: staging1
 description: staging cluster
 gke:
   cluster: projects/project-id-here/locations/us-central1/clusters/stagingcluster
@@ -38,7 +38,7 @@ gke:
 apiVersion: deploy.cloud.google.com/v1
 kind: Target
 metadata:
-  name: prod
+  name: prod1
 description: prod cluster
 requireApproval: true
 gke:
